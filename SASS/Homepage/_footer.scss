@@ -1,0 +1,41 @@
+$dark-grey: #353535;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+  background-color: $dark-grey;
+  align-items: flex-start;
+
+  &__ohmyfood {
+    height: 27px;
+    font-family: 'Shrikhand';
+    color: white;
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  &__txt--action {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 11px;
+    margin-bottom: 7px;
+  }
+
+  &__icon {
+    font-size: 13px;
+    width: 11px;
+  }
+
+  &__txt--simple {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 7px;
+  }
+}

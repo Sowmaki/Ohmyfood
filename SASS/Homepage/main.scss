@@ -1,0 +1,82 @@
+@import 'header';
+@import 'hero';
+@import 'fonctionnement_section';
+@import 'restaurants_section';
+@import 'footer';
+
+/****** Variables ******/
+/*** Colors ***/
+$main-color: #9356DC;
+$main-bg-color: #F6F6F6;
+$dark-grey: #353535;
+$clear-green: #99E2D0;
+$dark-green: #008766;
+
+@mixin button-gradient {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(202deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+}
+
+/*** Font Style ***/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu-title {
+  font-family: 'Shrikhand';
+  font-size: 28px;
+}
+
+.section-title-2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.button-txt {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/****** General ***********/
+body {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+h3 {
+  margin: 0px;
+}
+
+section {
+  padding: 20px;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
