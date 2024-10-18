@@ -1,0 +1,31 @@
+/*** Variables ***/
+
+$desktop-min-width: 1024px;
+
+$main-color: #9356DC;
+$main-bg-color: #F6F6F6;
+$dark-grey: #353535;
+$light-grey: #EAEAEA;
+$clear-green: #99E2D0;
+$dark-green: #008766;
+
+
+/*** Mixins ***/
+
+@mixin desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin flex-center($direction: column, $justify: center, $align: normal) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-gradient {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(202deg, $main-color 0%, rgba(255, 121, 218, 1) 100%);
+}

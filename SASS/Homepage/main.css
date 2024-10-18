@@ -1,11 +1,16 @@
+/*** Variables ***/
+/*** Mixins ***/
 /**** Nav ****/
 header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: normal;
 }
 
 .navbar {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -13,9 +18,14 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
-
+@media (min-width: 1024px) {
+  .navbar {
+    height: 96px;
+  }
+}
 .navbar__i-box {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -24,17 +34,23 @@ header {
   width: 30px;
   height: 30px;
 }
-
 .navbar__icon {
+  display: none;
   font-size: 16px;
 }
-
 .navbar__logo {
   height: 36px;
 }
+@media (min-width: 1024px) {
+  .navbar__logo {
+    height: 34px;
+  }
+}
 
+/**** Location ****/
 .location {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 17px;
@@ -43,80 +59,140 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
-
 .location__logo {
   font-size: 16px;
 }
-
 .location p {
   color: #353535;
+}
+
+.hero {
+  background-color: #F6F6F6;
+}
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+  }
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   align-items: center;
   text-align: center;
   padding-top: 39px;
   padding-bottom: 62px;
-  background-color: #F6F6F6;
 }
-
+@media (min-width: 1024px) {
+  .hero-content {
+    height: 179px;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
 .hero-content h1 {
   width: 73%;
   height: 68px;
 }
-
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    width: 100%;
+  }
+}
 .hero-content__paragraph {
   width: 84%;
   height: 46px;
 }
-
+@media (min-width: 1024px) {
+  .hero-content__paragraph {
+    font-size: 40px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 18px;
+  }
+}
 .hero-content__button {
   width: 58%;
   height: 50px;
+  flex-shrink: 0;
   margin-top: 22px;
   border-radius: 25px;
   background: rgb(147, 86, 220);
-  background: linear-gradient(202deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background: linear-gradient(202deg, #9356DC 0%, rgb(255, 121, 218) 100%);
   border: none;
   cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   color: white;
+}
+@media (min-width: 1024px) {
+  .hero-content__button {
+    margin-top: 18px;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 18.75px;
+    padding-right: 18.75px;
+  }
 }
 
 .fonctionnement {
   padding-top: 48px;
   padding-bottom: 68px;
 }
-
+@media (min-width: 1024px) {
+  .fonctionnement {
+    padding: 50px 180px;
+  }
+}
 .fonctionnement__steps {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   padding-left: 12px;
   gap: 25px;
 }
-
+@media (min-width: 1024px) {
+  .fonctionnement__steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    width: 100%;
+  }
+}
 .fonctionnement__step {
   display: flex;
   flex-direction: row;
+  justify-content: normal;
   align-items: center;
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   height: 72.38px;
 }
-
+@media (min-width: 1024px) {
+  .fonctionnement__step {
+    width: 32%;
+  }
+}
 .fonctionnement__step__content {
   display: flex;
   flex-direction: row;
+  justify-content: normal;
   align-items: center;
 }
-
 .fonctionnement__step__number {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -125,16 +201,13 @@ header {
   left: -12px;
   color: white;
 }
-
 .fonctionnement__icon {
   font-size: 17px;
   color: #7E7E7E;
 }
-
 .fonctionnement__icon--purple {
   color: #9356DC;
 }
-
 .fonctionnement h1 {
   margin-bottom: 26px;
 }
@@ -142,6 +215,7 @@ header {
 .step-content {
   display: flex;
   flex-direction: row;
+  justify-content: normal;
   align-items: center;
   gap: 20px;
   padding-left: 10px;
@@ -152,22 +226,49 @@ header {
   padding-top: 54px;
   padding-bottom: 66px;
 }
-
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 30px 180px 30px 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants a {
+    width: 100%;
+  }
+}
 .restaurants__section-title {
   margin-bottom: 18px;
 }
-
+@media (min-width: 1024px) {
+  .restaurants__section-title {
+    margin-bottom: 28px;
+  }
+}
 .restaurants__cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: normal;
   gap: 18px;
 }
-
-.restaurants__cards__row {
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    gap: 50px;
+  }
+}
+.restaurants__cards-row {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: normal;
   gap: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurants__cards-row {
+    flex-direction: row;
+    gap: 100px;
+    width: 100%;
+  }
 }
 
 .card {
@@ -175,32 +276,36 @@ header {
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
   overflow: hidden;
 }
-
 .card__top {
   position: relative;
   height: 174px;
   overflow: hidden;
 }
-
 .card__img {
   width: 100%;
   height: 100%;
-  object-position: bottom;
+  -o-object-position: bottom;
+     object-position: bottom;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
-
-.card__img--moved {
-  object-position: 50% 60%;
+@media (min-width: 1024px) {
+  .card__img {
+    -o-object-position: 50% 70%;
+       object-position: 50% 70%;
+  }
 }
-
+.card__img--moved {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
 .card__badge {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -216,7 +321,6 @@ header {
   font-size: 14px;
   font-weight: 500;
 }
-
 .card__bottom {
   display: flex;
   flex-direction: row;
@@ -228,70 +332,86 @@ header {
   background-color: white;
   padding-bottom: 12px;
 }
-
 .card__title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
 }
-
 .card__location {
   font-size: 17px;
   font-weight: 300;
 }
-
 .card__txt {
   margin-left: 13px;
 }
-
 .card__like {
   font-size: 21px;
   cursor: pointer;
   margin-right: 25px;
 }
+.card__like:hover {
+  border: none;
+}
 
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: normal;
   gap: 16px;
   padding: 22px 25px;
   background-color: #353535;
   align-items: flex-start;
 }
-
+@media (min-width: 1024px) {
+  .footer {
+    height: 84px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 25px 30px;
+  }
+}
 .footer__ohmyfood {
+  width: 139px;
   height: 27px;
   font-family: "Shrikhand";
   color: white;
 }
-
 .footer__txt {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: normal;
   color: white;
 }
-
+@media (min-width: 1024px) {
+  .footer__txt {
+    flex-direction: row;
+    gap: 7px;
+  }
+}
 .footer__txt--action {
   display: flex;
-  align-items: center;
   flex-direction: row;
+  justify-content: normal;
+  align-items: center;
   gap: 11px;
   margin-bottom: 7px;
+  width: 190px;
 }
-
 .footer__icon {
   font-size: 13px;
   width: 11px;
 }
-
 .footer__txt--simple {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 7px;
+  width: 130px;
 }
 
-/****** Variables ******/
-/*** Colors ***/
 /*** Font Style ***/
 * {
   font-family: "Roboto", sans-serif;
@@ -324,23 +444,23 @@ header {
 
 /****** General ***********/
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 h1 {
-  margin: 0px;
+  margin: 0;
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
 }
 
 h3 {
-  margin: 0px;
+  margin: 0;
 }
 
 section {
@@ -348,12 +468,11 @@ section {
 }
 
 .card img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 a {
   text-decoration: none;
   color: black;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

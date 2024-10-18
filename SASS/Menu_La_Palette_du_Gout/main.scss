@@ -1,0 +1,68 @@
+@import 'variables&mixins';
+@import 'header';
+@import 'footer';
+
+
+/*** Font Style ***/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu-title {
+  font-family: 'Shrikhand';
+  font-size: 28px;
+}
+
+.section-title-2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.button-txt {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/****** General ***********/
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

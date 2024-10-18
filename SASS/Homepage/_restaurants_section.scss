@@ -1,27 +1,44 @@
-$main-bg-color: #F6F6F6;
-$clear-green: #99E2D0;
-$dark-green: #008766;
-
 .restaurants {
   background-color: $main-bg-color;
   padding-top: 54px;
   padding-bottom: 66px;
 
+  @include desktop {
+    padding: 30px 180px 30px 180px;
+  }
+
+  & a {
+    @include desktop {
+      width: 100%
+    }
+  }
+
   &__section-title {
     margin-bottom: 18px;
+
+    @include desktop {
+      margin-bottom: 28px;
+    }
   }
 
   &__cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 18px
+    @include flex-center;
+    gap: 18px;
+
+    @include desktop {
+      gap: 50px;
+    }
   }
 
-  &__cards__row {
-    display: flex;
-    flex-direction: column;
+  &__cards-row {
+    @include flex-center;
     gap: 18px;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 100px;
+      width: 100%
+    }
   }
 
 }
@@ -31,7 +48,6 @@ $dark-green: #008766;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
-  position: relative;
   overflow: hidden;
 
   &__top {
@@ -45,9 +61,13 @@ $dark-green: #008766;
     height: 100%;
     object-position: bottom;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 1;
+
+    @include desktop {
+      object-position: 50% 70%;
+    }
   }
 
   &__img--moved {
@@ -55,9 +75,7 @@ $dark-green: #008766;
   }
 
   &__badge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center(column, center, center);
     position: absolute;
     right: 12px;
     top: 13px;
@@ -65,7 +83,7 @@ $dark-green: #008766;
     width: 23.5%;
     height: 29px;
     border-radius: 2px;
-    box-shadow: Opx 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     background-color: $clear-green;
     color: $dark-green;
     font-size: 14px;
@@ -73,10 +91,7 @@ $dark-green: #008766;
   }
 
   &__bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center(row, space-between, center);
     height: 77px;
     position: relative;
     z-index: 2;
@@ -103,6 +118,12 @@ $dark-green: #008766;
     font-size: 21px;
     cursor: pointer;
     margin-right: 25px;
+  }
+
+  &__like:hover {
+    border: none;
+    // color: $main-color;
+    // background: linear-gradient(202deg, $main-color 0%, rgba(255, 121, 218, 1) 100%);
   }
 
 }

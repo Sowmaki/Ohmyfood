@@ -1,21 +1,10 @@
+@import 'variables&mixins';
 @import 'header';
 @import 'hero';
 @import 'fonctionnement_section';
 @import 'restaurants_section';
 @import 'footer';
 
-/****** Variables ******/
-/*** Colors ***/
-$main-color: #9356DC;
-$main-bg-color: #F6F6F6;
-$dark-grey: #353535;
-$clear-green: #99E2D0;
-$dark-green: #008766;
-
-@mixin button-gradient {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(202deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-}
 
 /*** Font Style ***/
 * {
@@ -49,23 +38,23 @@ $dark-green: #008766;
 
 /****** General ***********/
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 h1 {
-  margin: 0px;
+  margin: 0;
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
 }
 
 h3 {
-  margin: 0px;
+  margin: 0;
 }
 
 section {

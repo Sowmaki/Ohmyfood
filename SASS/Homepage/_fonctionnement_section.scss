@@ -1,38 +1,41 @@
-$dark-grey: #353535;
-$main-color: #9356DC;
-$main-bg-color: #F6F6F6;
-
 .fonctionnement {
   padding-top: 48px;
   padding-bottom: 68px;
 
+  @include desktop {
+    padding: 50px 180px;
+  }
+
   &__steps {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, normal, normal);
     padding-left: 12px;
     gap: 25px;
+
+    @include desktop {
+      @include flex-center(row, space-between, normal);
+      width: 100%;
+    }
+
   }
 
   &__step {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-center(row, normal, center);
     border-radius: 20px;
     background-color: $main-bg-color;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     height: 72.38px;
 
+    @include desktop {
+      width: 32%;
+    }
+
 
     &__content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      @include flex-center(row, normal, center);
     }
 
     &__number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center(row, center, center);
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -58,9 +61,7 @@ $main-bg-color: #F6F6F6;
 }
 
 .step-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include flex-center(row, normal, center);
   gap: 20px;
-  padding-left: 35;
+  padding-left: 10px;
 }
