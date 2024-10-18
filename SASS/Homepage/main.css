@@ -13,6 +13,7 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
+
 .navbar__i-box {
   display: flex;
   justify-content: center;
@@ -23,9 +24,11 @@ header {
   width: 30px;
   height: 30px;
 }
+
 .navbar__icon {
   font-size: 16px;
 }
+
 .navbar__logo {
   height: 36px;
 }
@@ -40,9 +43,11 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
+
 .location__logo {
   font-size: 16px;
 }
+
 .location p {
   color: #353535;
 }
@@ -56,14 +61,17 @@ header {
   padding-bottom: 62px;
   background-color: #F6F6F6;
 }
+
 .hero-content h1 {
   width: 73%;
   height: 68px;
 }
+
 .hero-content__paragraph {
   width: 84%;
   height: 46px;
 }
+
 .hero-content__button {
   width: 58%;
   height: 50px;
@@ -81,12 +89,14 @@ header {
   padding-top: 48px;
   padding-bottom: 68px;
 }
+
 .fonctionnement__steps {
   display: flex;
   flex-direction: column;
   padding-left: 12px;
   gap: 25px;
 }
+
 .fonctionnement__step {
   display: flex;
   flex-direction: row;
@@ -96,11 +106,13 @@ header {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   height: 72.38px;
 }
+
 .fonctionnement__step__content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .fonctionnement__step__number {
   display: flex;
   align-items: center;
@@ -113,13 +125,16 @@ header {
   left: -12px;
   color: white;
 }
+
 .fonctionnement__icon {
   font-size: 17px;
   color: #7E7E7E;
 }
+
 .fonctionnement__icon--purple {
   color: #9356DC;
 }
+
 .fonctionnement h1 {
   margin-bottom: 26px;
 }
@@ -129,7 +144,7 @@ header {
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  padding-left: 35;
+  padding-left: 10px;
 }
 
 .restaurants {
@@ -137,15 +152,18 @@ header {
   padding-top: 54px;
   padding-bottom: 66px;
 }
+
 .restaurants__section-title {
   margin-bottom: 18px;
 }
+
 .restaurants__cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 18px;
 }
+
 .restaurants__cards__row {
   display: flex;
   flex-direction: column;
@@ -160,25 +178,27 @@ header {
   position: relative;
   overflow: hidden;
 }
+
 .card__top {
   position: relative;
   height: 174px;
   overflow: hidden;
 }
+
 .card__img {
   width: 100%;
   height: 100%;
-  -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 1;
 }
+
 .card__img--moved {
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
+  object-position: 50% 60%;
 }
+
 .card__badge {
   display: flex;
   justify-content: center;
@@ -190,12 +210,13 @@ header {
   width: 23.5%;
   height: 29px;
   border-radius: 2px;
-  box-shadow: Opx 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   background-color: #99E2D0;
   color: #008766;
   font-size: 14px;
   font-weight: 500;
 }
+
 .card__bottom {
   display: flex;
   flex-direction: row;
@@ -207,18 +228,22 @@ header {
   background-color: white;
   padding-bottom: 12px;
 }
+
 .card__title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
 }
+
 .card__location {
   font-size: 17px;
   font-weight: 300;
 }
+
 .card__txt {
   margin-left: 13px;
 }
+
 .card__like {
   font-size: 21px;
   cursor: pointer;
@@ -233,16 +258,19 @@ header {
   background-color: #353535;
   align-items: flex-start;
 }
+
 .footer__ohmyfood {
   height: 27px;
   font-family: "Shrikhand";
   color: white;
 }
+
 .footer__txt {
   display: flex;
   flex-direction: column;
   color: white;
 }
+
 .footer__txt--action {
   display: flex;
   align-items: center;
@@ -250,10 +278,12 @@ header {
   gap: 11px;
   margin-bottom: 7px;
 }
+
 .footer__icon {
   font-size: 13px;
   width: 11px;
 }
+
 .footer__txt--simple {
   font-size: 16px;
   font-weight: 400;
@@ -318,11 +348,12 @@ section {
 }
 
 .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 a {
   text-decoration: none;
   color: black;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
