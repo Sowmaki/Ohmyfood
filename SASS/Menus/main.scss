@@ -1,6 +1,7 @@
 @import 'variables&mixins';
 @import 'header';
 @import 'footer';
+@import 'menu';
 
 
 /*** Font Style ***/
@@ -8,23 +9,22 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.section-title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
 .menu-title {
   font-family: 'Shrikhand';
   font-size: 28px;
 }
 
-.section-title-2 {
+.section-title {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.plate-title {
   font-size: 18px;
   font-weight: 500;
 }
 
 .paragraph {
-  font-size: 18px;
   font-weight: 300;
 }
 
@@ -33,9 +33,31 @@
   font-weight: 500;
 }
 
+.button {
+  width: 58%;
+  height: 50px;
+  flex-shrink: 0;
+  margin-top: 22px;
+  border-radius: 25px;
+  @include button-gradient;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
 /****** General ***********/
+
 body {
   margin: 0;
+}
+
+.main-container {
+  @include flex-center(column, normal, normal);
+
+  @include desktop {
+    align-items: center;
+  }
 }
 
 p {
@@ -54,11 +76,7 @@ h3 {
   margin: 0;
 }
 
-section {
-  padding: 20px;
-}
-
-.card img {
+img {
   object-fit: cover;
 }
 

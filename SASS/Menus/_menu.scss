@@ -1,0 +1,59 @@
+.menu {
+  @include flex-center (column, center, center);
+  gap: 40px;
+  padding: 32px 13px 30px 13px;
+  background-color: $main-bg-color;
+  border-radius: 39px 39px 0 0;
+  overflow: hidden;
+  position: relative;
+  bottom: 39px;
+  z-index: 2;
+
+  &__top {
+    @include flex-center (row, space-between, center);
+    width: fit-content;
+    gap: 24px;
+  }
+
+  &__like {
+    font-size: 21px;
+  }
+
+  @include desktop {
+    width: 73%;
+  }
+}
+
+.mets {
+  @include flex-center;
+  width: 100%;
+  gap: 12px;
+
+  @include desktop {
+    width: 60%;
+  }
+
+  & p {
+    font-size: 15px;
+  }
+
+  &__section-title {
+    text-transform: uppercase;
+    height: 27px;
+
+    & span {
+      text-decoration: underline;
+      text-decoration-color: $clear-green;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 9px;
+    }
+  }
+
+  &__plate {
+    @include flex-center(row, space-between, flex-end);
+    padding: 13.5px 13.5px 13.5px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    border-radius: 15px;
+    background-color: white;
+  }
+}
