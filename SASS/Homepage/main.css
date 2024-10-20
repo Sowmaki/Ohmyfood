@@ -119,9 +119,8 @@ header {
   }
 }
 .hero-content__button {
-  width: 58%;
   height: 50px;
-  flex-shrink: 0;
+  padding: 13px 19px 13px 19px;
   margin-top: 22px;
   border-radius: 25px;
   background: rgb(147, 86, 220);
