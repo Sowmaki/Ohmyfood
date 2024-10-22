@@ -27,5 +27,11 @@ $dark-green: #008766;
 
 @mixin button-gradient {
   background: rgb(147, 86, 220);
-  background: linear-gradient(202deg, $main-color 0%, rgba(255, 121, 218, 1) 100%);
+  background: linear-gradient(0deg, $main-color 0%, rgba(255, 121, 218, 1) 100%);
+}
+
+@mixin text-towrap {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

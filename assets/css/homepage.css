@@ -124,7 +124,7 @@ header {
   margin-top: 22px;
   border-radius: 25px;
   background: rgb(147, 86, 220);
-  background: linear-gradient(202deg, #9356DC 0%, rgb(255, 121, 218) 100%);
+  background: linear-gradient(0deg, #9356DC 0%, rgb(255, 121, 218) 100%);
   border: none;
   cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -474,4 +474,4 @@ section {
 a {
   text-decoration: none;
   color: black;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=homepage.css.map */
