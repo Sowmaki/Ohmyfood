@@ -36,48 +36,17 @@
 
     @include desktop {
       font-size: 40px;
-      font-weight: 700;
       width: 100%;
       margin-top: 18px;
     }
   }
 
   &__button {
-    height: 50px;
-    padding: 13px 19px 13px 19px;
-    margin-top: 22px;
-    border-radius: 25px;
-    @include button-gradient;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    color: white;
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      background-color: white;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-
-    &:hover:after {
-      opacity: 0.3;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
+    @include button;
+    padding: 13px 19px;
 
     @include desktop {
       margin-top: 18px;
-      width: fit-content;
-      padding-left: 18.75px;
-      padding-right: 18.75px;
     }
   }
 }

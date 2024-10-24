@@ -18,7 +18,7 @@
 
   }
 
-  &__step {
+  .step {
     @include flex-center(row, normal, center);
     border-radius: 20px;
     background-color: $main-bg-color;
@@ -29,9 +29,10 @@
       width: 32%;
     }
 
-
     &__content {
       @include flex-center(row, normal, center);
+      gap: 20px;
+      padding-left: 10px;
     }
 
     &__number {
@@ -58,10 +59,4 @@
   & h1 {
     margin-bottom: 26px;
   }
-}
-
-.step-content {
-  @include flex-center(row, normal, center);
-  gap: 20px;
-  padding-left: 10px;
 }

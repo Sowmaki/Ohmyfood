@@ -1,0 +1,61 @@
+/*** Variables ***/
+/*** Mixins ***/
+/***************** Elements *******************/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  gap: 16px;
+  padding: 22px 25px;
+  background-color: #353535;
+  align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  .footer {
+    height: 84px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 25px 30px;
+  }
+}
+.footer__ohmyfood {
+  width: 139px;
+  height: 27px;
+  font-family: "Shrikhand";
+  color: white;
+}
+.footer__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .footer__txt {
+    flex-direction: row;
+    gap: 7px;
+  }
+}
+.footer__txt--action {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 7px;
+  width: 190px;
+}
+.footer__txt--simple {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 7px;
+  width: 130px;
+}
+.footer__icon {
+  font-size: 13px;
+  width: 11px;
+}/*# sourceMappingURL=footer.css.map */

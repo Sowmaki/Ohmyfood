@@ -1,25 +1,23 @@
-@import 'variables&mixins';
+@import '../variables&mixins';
+@import '../common.scss';
 @import 'loader';
 @import 'header';
 @import 'hero';
 @import 'fonctionnement_section';
 @import 'restaurants_section';
-@import 'footer';
+@import '../footer.scss';
 
 
 /*** Font Style ***/
-* {
-  font-family: 'Roboto', sans-serif;
+
+.menu-title {
+  font-family: 'Shrikhand';
+  font-size: 28px;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: 700;
-}
-
-.menu-title {
-  font-family: 'Shrikhand';
-  font-size: 28px;
 }
 
 .section-title-2 {
@@ -29,44 +27,9 @@
 
 .paragraph {
   font-size: 18px;
-  font-weight: 300;
 }
 
 .button-txt {
   font-size: 16px;
   font-weight: 500;
-}
-
-/****** General ***********/
-body {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h3 {
-  margin: 0;
-}
-
-section {
-  padding: 20px;
-}
-
-.card img {
-  object-fit: cover;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }

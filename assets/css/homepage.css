@@ -1,5 +1,60 @@
 /*** Variables ***/
 /*** Mixins ***/
+/***************** Elements *******************/
+/*** Font Style ***/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-title {
+  font-family: "Shrikhand";
+  font-size: 28px;
+}
+
+.paragraph {
+  font-weight: 300;
+}
+
+.button-txt {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/****** General ***********/
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /*************************** Filtre **************************/
 .loader {
   position: fixed;
@@ -216,10 +271,12 @@ header {
   height: 63px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .navbar {
     height: 96px;
+    box-shadow: none;
   }
 }
 .navbar__i-box {
@@ -228,13 +285,13 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 17px;
-  top: 17px;
-  width: 30px;
-  height: 30px;
+  left: 0px;
+  top: 0px;
+  bottom: 0;
+  padding: 17px;
 }
 .navbar__icon {
-  display: none;
+  display: flex;
   font-size: 16px;
 }
 .navbar__logo {
@@ -257,6 +314,11 @@ header {
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
+}
+@media (min-width: 1024px) {
+  .location {
+    box-shadow: none;
+  }
 }
 .location__logo {
   font-size: 16px;
@@ -312,14 +374,14 @@ header {
 @media (min-width: 1024px) {
   .hero-content__paragraph {
     font-size: 40px;
-    font-weight: 700;
     width: 100%;
     margin-top: 18px;
   }
 }
 .hero-content__button {
+  padding: 13px 19px;
   height: 50px;
-  padding: 13px 19px 13px 19px;
+  flex-shrink: 0;
   margin-top: 22px;
   border-radius: 25px;
   background: rgb(147, 86, 220);
@@ -329,6 +391,7 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   color: white;
   position: relative;
+  padding: 13px 19px;
 }
 .hero-content__button:after {
   content: "";
@@ -350,10 +413,6 @@ header {
 @media (min-width: 1024px) {
   .hero-content__button {
     margin-top: 18px;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding-left: 18.75px;
-    padding-right: 18.75px;
   }
 }
 
@@ -383,7 +442,7 @@ header {
     width: 100%;
   }
 }
-.fonctionnement__step {
+.fonctionnement .step {
   display: flex;
   flex-direction: row;
   justify-content: normal;
@@ -394,17 +453,19 @@ header {
   height: 72.38px;
 }
 @media (min-width: 1024px) {
-  .fonctionnement__step {
+  .fonctionnement .step {
     width: 32%;
   }
 }
-.fonctionnement__step__content {
+.fonctionnement .step__content {
   display: flex;
   flex-direction: row;
   justify-content: normal;
   align-items: center;
+  gap: 20px;
+  padding-left: 10px;
 }
-.fonctionnement__step__number {
+.fonctionnement .step__number {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -426,15 +487,6 @@ header {
 }
 .fonctionnement h1 {
   margin-bottom: 26px;
-}
-
-.step-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: normal;
-  align-items: center;
-  gap: 20px;
-  padding-left: 10px;
 }
 
 .restaurants {
@@ -563,12 +615,42 @@ header {
 .card__like {
   font-size: 21px;
   cursor: pointer;
-  margin-right: 25px;
+  position: relative;
+  right: 25px;
+  width: 24px;
+  height: 24px;
 }
-.card__like:hover {
-  border: none;
+.card__like::before {
+  content: "\f004";
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.card__like::after {
+  content: "\f004";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: opacity 0.3s ease;
+}
+.card__like:hover::before {
+  opacity: 0;
+}
+.card__like:hover::after {
+  opacity: 1;
 }
 
+/*** Variables ***/
+/*** Mixins ***/
+/***************** Elements *******************/
 .footer {
   display: flex;
   flex-direction: column;
@@ -617,30 +699,26 @@ header {
   margin-bottom: 7px;
   width: 190px;
 }
-.footer__icon {
-  font-size: 13px;
-  width: 11px;
-}
 .footer__txt--simple {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 7px;
   width: 130px;
 }
+.footer__icon {
+  font-size: 13px;
+  width: 11px;
+}
 
 /*** Font Style ***/
-* {
-  font-family: "Roboto", sans-serif;
+.menu-title {
+  font-family: "Shrikhand";
+  font-size: 28px;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: 700;
-}
-
-.menu-title {
-  font-family: "Shrikhand";
-  font-size: 28px;
 }
 
 .section-title-2 {
@@ -650,45 +728,9 @@ header {
 
 .paragraph {
   font-size: 18px;
-  font-weight: 300;
 }
 
 .button-txt {
   font-size: 16px;
   font-weight: 500;
-}
-
-/****** General ***********/
-body {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h3 {
-  margin: 0;
-}
-
-section {
-  padding: 20px;
-}
-
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }/*# sourceMappingURL=homepage.css.map */

@@ -1,0 +1,150 @@
+/*** Variables ***/
+
+$desktop-min-width: 1024px;
+
+$main-color: #9356DC;
+$secondary-color: #FF79DA;
+$main-bg-color: #F6F6F6;
+$dark-grey: #353535;
+$light-grey: #EAEAEA;
+$clear-green: #99E2D0;
+$dark-green: #008766;
+
+
+/*** Mixins ***/
+
+@mixin desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin flex-center($direction: column, $justify: center, $align: normal) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-gradient {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, $main-color 0%, rgba(255, 121, 218, 1) 100%);
+}
+
+@mixin text-towrap {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/***************** Elements *******************/
+
+@mixin navbar {
+  @include flex-center(row, center, center);
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+
+  @include desktop {
+    height: 96px;
+    box-shadow: none;
+  }
+
+  &__i-box {
+    @include flex-center(row, center, center);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0;
+    padding: 17px;
+  }
+
+  &__icon {
+    display: flex;
+    font-size: 16px;
+  }
+
+  &__logo {
+    height: 36px;
+
+    @include desktop {
+      height: 34px;
+    }
+  }
+}
+
+@mixin heart-icon {
+  font-size: 21px;
+  cursor: pointer;
+  position: relative;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+
+  &::before {
+    content: '\f004';
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  &::after {
+    content: '\f004';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    background-clip: text;
+    color: transparent;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin button {
+  padding: 13px 19px;
+  height: 50px;
+  flex-shrink: 0;
+  margin-top: 22px;
+  border-radius: 25px;
+  @include button-gradient;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover:after {
+    opacity: 0.3;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+}

@@ -1,3 +1,5 @@
+@import 'variables&mixins';
+
 .footer {
   @include flex-center;
   gap: 16px;
@@ -35,15 +37,16 @@
     width: 190px;
   }
 
-  &__icon {
-    font-size: 13px;
-    width: 11px;
-  }
-
   &__txt--simple {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 7px;
     width: 130px;
   }
+
+  &__icon {
+    font-size: 13px;
+    width: 11px;
+  }
+
 }
