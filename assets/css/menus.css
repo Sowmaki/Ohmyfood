@@ -142,6 +142,25 @@ header {
 .menu__like {
   font-size: 21px;
 }
+.menu .entrees {
+  animation-delay: 0s;
+}
+.menu .plats {
+  animation-delay: 0.5s;
+}
+.menu .desserts {
+  animation-delay: 1s;
+}
+@keyframes onebyone {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @media (min-width: 1024px) {
   .menu {
     width: 73%;
@@ -155,6 +174,9 @@ header {
   align-items: normal;
   width: 100%;
   gap: 12px;
+  opacity: 0;
+  transform: scale(0.25);
+  animation: onebyone 1s ease-in forwards;
 }
 @media (min-width: 1024px) {
   .mets {

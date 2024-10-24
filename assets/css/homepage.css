@@ -173,19 +173,19 @@
     font-size: 4rem;
   }
 }
-.loader__stars .star1 {
+.loader__stars i:nth-child(1) {
   animation-delay: 0s;
 }
-.loader__stars .star2 {
+.loader__stars i:nth-child(2) {
   animation-delay: 0.2s;
 }
-.loader__stars .star3 {
+.loader__stars i:nth-child(3) {
   animation-delay: 0.4s;
 }
-.loader__stars .star4 {
+.loader__stars i:nth-child(4) {
   animation-delay: 0.6s;
 }
-.loader__stars .star5 {
+.loader__stars i:nth-child(5) {
   animation-delay: 0.8s;
 }
 @keyframes showStar {

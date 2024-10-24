@@ -20,6 +20,30 @@
     font-size: 21px;
   }
 
+  .entrees {
+    animation-delay: 0s;
+  }
+
+  .plats {
+    animation-delay: 0.5s;
+  }
+
+  .desserts {
+    animation-delay: 1s;
+  }
+
+  @keyframes onebyone {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   @include desktop {
     width: 73%;
   }
@@ -29,6 +53,9 @@
   @include flex-center;
   width: 100%;
   gap: 12px;
+  opacity: 0;
+  transform: scale(0.25);
+  animation: onebyone 1s ease-in forwards;
 
   @include desktop {
     width: 60%;
@@ -56,8 +83,6 @@
     &:hover>.mets__price-and-check {
       margin-right: 0px;
     }
-
-
   }
 
   &__plate-txt {
