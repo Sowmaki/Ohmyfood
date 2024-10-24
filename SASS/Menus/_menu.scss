@@ -34,11 +34,6 @@
     width: 60%;
   }
 
-  & p {
-    font-size: 15px;
-    @include text-towrap;
-  }
-
   &__section-title {
     text-transform: uppercase;
     height: 27px;
@@ -52,14 +47,58 @@
   }
 
   &__plate {
-    @include flex-center(row, space-between, flex-end);
-    padding: 13.5px 13.5px 13.5px 15px;
+    @include flex-center(row, normal, normal);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
     border-radius: 15px;
     background-color: white;
+    overflow: hidden;
+
+    &:hover>.mets__price-and-check {
+      margin-right: 0px;
+    }
+
+
+  }
+
+  &__plate-txt {
+    @include text-towrap;
+    padding: 13.5px 0px 13.5px 15px;
+    width: 100%;
+  }
+
+  & p {
+    display: block;
+    font-size: 15px;
+    @include text-towrap;
   }
 
   &__plate-title {
+    display: block;
     @include text-towrap;
+  }
+
+  &__price-and-check {
+    @include flex-center(row);
+    gap: 13.5px;
+    margin-right: -59px;
+    transition: margin 500ms ease-in-out;
+  }
+
+  &__prix {
+    align-self: flex-end;
+    margin-bottom: 13.5px;
+  }
+
+  &__check {
+    @include flex-center(column, center, center);
+    width: 59px;
+    height: 100%;
+    background-color: $clear-green;
+    margin-right: 0;
+
+    & i {
+      color: white;
+      font-size: 20px;
+    }
   }
 }
