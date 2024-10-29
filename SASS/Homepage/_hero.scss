@@ -44,6 +44,7 @@
   &__button {
     @include button;
     padding: 13px 19px;
+    height: fit-content;
 
     @include desktop {
       margin-top: 18px;

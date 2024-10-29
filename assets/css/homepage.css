@@ -392,6 +392,8 @@ header {
   color: white;
   position: relative;
   padding: 13px 19px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .hero-content__button:after {
   content: "";
