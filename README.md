@@ -1,60 +1,51 @@
-# 🔍 Algorithme de Recherche – Plateforme de Recettes
+# Intégration Mobile-First – Site Start-up
 
-Ce projet a pour objectif de développer un **algorithme de recherche performant** pour une plateforme de recettes de cuisine, tout en respectant les principes du **Green Code**.
+Ce projet consiste à développer l’**interface mobile-first** d’un site pour une start-up, en intégrant des **animations CSS** et en utilisant **Git/GitHub** pour le versionnage.
 
 ---
 
 ### Objectifs
 
-- Concevoir une interface utilisateur intuitive pour la recherche de recettes
-- Développer **deux versions** d’un algorithme de recherche en JavaScript
-- Comparer leurs performances avec des outils dédiés
-- Choisir et documenter l'algorithme le plus efficace
+- Intégrer une **maquette mobile-first** (maquettes mobile + desktop fournies)
+- Utiliser **SASS** pour le style
+- Ajouter des **animations CSS** pour une interface plus vivante
+- Versionner le projet avec **Git** et **GitHub**
 
 ---
 
 ### Technologies utilisées
 
-- JavaScript (vanilla)
-- Bootstrap (interface responsive)
-- Outils de benchmark : [Jsben.ch](https://jsben.ch) ou équivalent
+- HTML5 / SASS (SCSS)
+- CSS animations
+- Git & GitHub
+- Figma (prototypes & maquettes)
 
 ---
 
 ### Étapes du projet
 
-1. **Création de l’interface** avec Bootstrap
-2. **Développement de deux algorithmes de recherche**
-   - Parcourir et filtrer un fichier `.json` de recettes
-3. **Tests de performance**
-   - Comparaison via Jsben.ch ou outils similaires
-4. **Choix de l’algorithme optimal**
-   - Analyse des résultats
-   - Justification technique
-5. **Documentation**
-   - Explication du fonctionnement
-   - Raisons du choix
-6. **Optimisation Green Code**
-   - Réduction de la complexité
-   - Respect des bonnes pratiques écologiques
+1. Intégration de la **maquette mobile-first**
+2. Ajout progressif de la version **desktop (responsive design)**
+3. Implémentation des **animations CSS**
+4. Utilisation de **SASS** pour organiser et optimiser le style
+5. Versionnage du projet avec Git
+6. Publication sur **GitHub**
 
 ---
 
 ### Livrables attendus
 
-- Interface fonctionnelle avec champ de recherche
-- Deux versions d’algorithme de recherche
-- Rapport de comparaison des performances
-- Documentation du choix final
-- Code propre, lisible et éco-responsable
+- Interface responsive (mobile → desktop)
+- Animations CSS fluides et pertinentes
+- Code propre et bien structuré (HTML + SCSS)
+- Projet versionné et hébergé sur GitHub
 
 ---
 
-### Green Code
+### Bonus
 
-Une attention particulière est portée à :
-- La **limitation des traitements inutiles**
-- L’**optimisation de la mémoire**
-- La **réduction de l’empreinte énergétique** du code
+- Respect des bonnes pratiques d’accessibilité
+- Respect des standards mobile-first
+- Organisation SCSS modulable (partials, variables, mixins…)
 
 ---
